@@ -11,6 +11,7 @@ install:
     - npm install -g codecov
     - npm install
 script:
+    - grep --help
     - echo -e "\x1b\x5b35;1m*** Starting tests...\x1b\x5b0m"
     - npm test -- --runInBand --coverage
     - codecov
