@@ -11,7 +11,8 @@ install:
     - npm install -g codecov
     - npm install
 script:
-    - grep --help
+    - pwd
+    - grep -r -l “@module” . --exclude-dir={build,node_modules,sampler,samples,tests,dist,coverage} --include=\*.js | wc -l
     - echo -e "\x1b\x5b35;1m*** Starting tests...\x1b\x5b0m"
     - npm test -- --runInBand --coverage
     - codecov
