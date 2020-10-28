@@ -98,7 +98,7 @@ const SlotItemDecorator = compose(
 	UiSlotItemDecorator,
 	Pure,
 	Toggleable(
-		{prop: 'remeasure', activate: 'onFocus', deactivate: 'onBlur', toggle: null}
+		{toggleProp: 'onClick', prop: 'remeasure', activate: 'onFocus', deactivate: 'onBlur', toggle: null}
 	),
 	UiItemDecorator, // (Touchable)
 	Spottable,
